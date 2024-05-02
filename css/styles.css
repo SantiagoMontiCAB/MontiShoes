@@ -42,22 +42,29 @@ footer {
 /*estilos catalogo*/
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px; 
+    flex-direction: column;
+    max-width: 1200px; /* ajusta el ancho máximo de la galería según tus necesidades */
+    margin: 0 auto; /* centra la galería horizontalmente */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* distribuye las imágenes uniformemente en la fila */
+    margin-bottom: 10px; /* ajusta el margen entre las filas */
 }
 
 .image-container {
-    flex-basis: calc(33.33% - 20px); 
+    flex-basis: 30%; /* ajusta el tamaño de cada contenedor de imagen */
     text-align: center;
+    margin: 0 5px; /* ajusta el margen entre las imágenes */
 }
 
-.image-container img {
-    width: 100%; 
-    height: auto; 
-    max-width: 200px;
-
+img {
+    max-width: 100%;
+    height: auto;
 }
+
+
 .social-icons img {
     width: 50px;
     height: auto;
@@ -161,6 +168,7 @@ h2 {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+
 }
 
 /*pagina de inicio*/
@@ -186,6 +194,7 @@ h2 {
     max-width: 100%; 
     height: auto;
 }
+
 /* Estilos para la página de nosotros */
 .content {
     display: flex;
@@ -205,4 +214,8 @@ h3 {
     text-align:center ;
     font-style: italic;
     font-size: larger;
+}
+p {
+    display: flex;
+    color: gray;
 }
