@@ -38,47 +38,62 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+footer p {
+    margin: 0;
 }
 a:hover {
     font-weight: bold;
     padding:20px;
     color: azure;
 }
-
-
-/*estilos catalogo*/
+/*estilos catalogo desktop*/
 .gallery {
     display: flex;
     flex-direction: column;
-    max-width: 1200px; /* ajusta el ancho máximo de la galería según tus necesidades */
-    margin: 0 auto; /* centra la galería horizontalmente */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 .row {
     display: flex;
-    justify-content: space-between; /* distribuye las imágenes uniformemente en la fila */
-    margin-bottom: 10px; /* ajusta el margen entre las filas */
+    justify-content: space-between; 
+    margin-bottom: 10px; 
 }
 
 .image-container {
-    flex-basis: 30%; /* ajusta el tamaño de cada contenedor de imagen */
+    flex-basis: 30%; 
     text-align: center;
-    margin: 0 5px; /* ajusta el margen entre las imágenes */
+    margin: 0 5px; 
 }
 
 img {
     max-width: 100%;
     height: auto;
 }
+/*redes sociales*/
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
+.social-icons a {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
 
 .social-icons img {
-    width: 50px;
+    width: 40px;
     height: auto;
-    display: flex;
-    flex-direction: row;
 }
+
+
 /*estilos contacto*/
 .text {
     font-style: italic;
@@ -329,32 +344,31 @@ h2 {
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
+    #carouselExampleIndicators {
+        float: right;
+        width: calc(100% - 30px); 
+    }
 }
 /*Estilos pagina inicio desktop*/
-#carouselExampleIndicators {
+@media screen and (min-width:1024px) {
+
+.content .text {
+    float: left;
+    width: calc(100% - 30px); 
+    font-size: 45px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h1 {
+    font-size: 50px;
 }
 
-
-.text {
-    width: 30%; 
-    font-size: 40px;
-    font-style: italic;
+#carouselExampleIndicators {
+    float: right;
+    width: calc(500% - 100px);
 }
-
-.d-block w-100 {
-    width: 40%; 
-    text-align: center; 
 }
-
-.d-block w-100 img {
-    max-width: 100%; 
-    height: auto;
-}
-
-
 /* Estilos para la página de nosotros */
 .content {
     display: flex;
